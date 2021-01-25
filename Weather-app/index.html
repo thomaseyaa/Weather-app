@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Météo</title>
+    <link rel="icon" type="image/png" href="img/meteo.png"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous"/>
+    <script src="https://unpkg.com/axios/dist/axios.min.js" defer></script>
+</head>
+<body class="bg-light">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-sm-6 mt-5">
+                <h1 class="text-center mb-4">Météo</h1>
+
+                <div id="error" class="alert alert-danger text-center" style="display: none;"></div>
+
+                <form id="form">
+                    <div class="mb-3">
+                        <input type="text" class="form-control" id="city" placeholder="Paris"/>
+                        <div class="d-grid gap-2">
+                            <button type="submit" class="btn btn-info text-white btn-block my-3">Voir</button>
+                        </div>
+                    </div>
+                </form>
+
+                <div class="card mt-5" id="display-div" style="display: none;">
+                    <div class="card-body text-center">
+                        <h2 id="cityDisplay" style="text-transform: capitalize"></h2>
+                        <img id="icon" src="" alt="">
+                        <h1>
+                            <span id="temp"></span>
+                            <sup>°</sup>
+                        </h1>
+                        <p>
+                            <span id="weather" style="text-transform: capitalize"></span>
+                        </p>
+                  </div>
+              </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="js/app.js" defer></script>
+</html>
